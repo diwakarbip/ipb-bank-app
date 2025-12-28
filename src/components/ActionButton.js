@@ -4,6 +4,7 @@ import { COLORS } from '../theme/colors';
 
 export default function ActionButton({
   title,
+  onPress,
   variant = 'primary',
   style,
 }) {
@@ -11,10 +12,11 @@ export default function ActionButton({
 
   return (
     <TouchableOpacity
+      onPress={onPress}
       style={[
         styles.button,
         isSecondary && styles.secondary,
-        style, // 👈 allows per-button size control
+        style,
       ]}
     >
       <Text
@@ -31,23 +33,22 @@ export default function ActionButton({
 
 const styles = StyleSheet.create({
   button: {
-    paddingVertical: 8,
-    paddingHorizontal: 18,
+    paddingVertical: 10,
+    paddingHorizontal: 28,
     borderRadius: 10,
     backgroundColor: COLORS.primaryPurple,
+    shadowOffset: 100,
   },
 
   secondary: {
     backgroundColor: COLORS.accentGold,
   },
-
   text: {
     color: 'white',
     fontWeight: '700',
     fontSize: 14,
   },
-
   secondaryText: {
-    color: 'black',
+    color: COLORS.primaryPurple,
   },
 });

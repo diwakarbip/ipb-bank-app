@@ -18,7 +18,7 @@ export default function LoanTopSection() {
         </TouchableOpacity>
 
         <View style={styles.pill}>
-          <Text style={styles.pillText}>Application Status</Text>
+          <Text style={styles.pillText}>Active Loans/Credits</Text>
         </View>
       </View>
     </View>
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 25,
     borderRadius: 25,
-    marginLeft: 30,
+    marginLeft: 20,
     marginTop: 1,
   },
 

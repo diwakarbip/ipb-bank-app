@@ -1,6 +1,18 @@
+
 import React from 'react';
-import LoanStatusScreen from './src/screens/LoanStatusScreen';
+import AppNavigator from './src/navigation/AppNavigator';
 
 export default function App() {
-  return <LoanStatusScreen />;
+  return <AppNavigator />;
 }
+
+/*
+import React from 'react';
+import ActiveLoansScreen from './src/screens/ActiveLoansScreen';
+
+export default function App() {
+  return <ActiveLoansScreen />;
+}
+  */
+
+

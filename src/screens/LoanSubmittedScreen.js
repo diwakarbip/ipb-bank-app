@@ -3,21 +3,22 @@ import ScreenBackground from '../components/ScreenBackground';
 import AppHeader from '../components/AppHeader';
 import BottomNav from '../components/BottomNav';
 import LoanTopSection from '../components/LoanTopSection';
-import LoanStatusCard from '../components/cards/LoanStatusCard';
-import { View, Text, StyleSheet } from 'react-native';
-import ActionButton from '../components/ActionButton.js';
+import LoanSubmittedCard from '../components/cards/LoanSubmittedCard';
+import { View, StyleSheet } from 'react-native';
+import ActionButton from '../components/ActionButton';
 
-export default function LoanStatusScreen() {
+export default function LoanSubmittedScreen() {
   return (
     <>
     <ScreenBackground>
       <AppHeader />
       <LoanTopSection />
-      <LoanStatusCard />
+      <LoanSubmittedCard />
+      
       <View style={styles.btnRow}>
               <ActionButton
                 title="Refresh"
-                style={{ paddingHorizontal: 40, paddingVertical: 11 }}
+                style={{ paddingHorizontal: 35, paddingVertical: 10 }}
               />
               <ActionButton
                 title="Contact Support"
@@ -26,18 +27,18 @@ export default function LoanStatusScreen() {
             </View>
       <BottomNav />
       </ScreenBackground>
+      
     </>
+    
   );
 }
 
 const styles = StyleSheet.create({
   btnRow: {
     flexDirection: 'row',
-    gap: 12,
-    marginTop: 359,
-    gap: 30, 
+    gap: 30,
+    marginTop: 335,
     justifyContent: 'center',
   },
 });
-
 

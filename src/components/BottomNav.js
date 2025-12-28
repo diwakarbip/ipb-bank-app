@@ -24,15 +24,8 @@ export default function BottomNav() {
     <View style={styles.nav}>
       <Item icon={require('../../assets/images/Home.png')} label="Home" />
       <Item icon={require('../../assets/images/Deposit.png')} label="Deposit" />
-      <Item
-        icon={require('../../assets/images/Loan.png')}
-        label="Loans"
-        active
-      />
-      <Item
-        icon={require('../../assets/images/Payments.png')}
-        label="Payment"
-      />
+      <Item icon={require('../../assets/images/Loan.png')} label="Loans" active />
+      <Item icon={require('../../assets/images/Payments.png')} label="Payment" />
       <Item icon={require('../../assets/images/Help.png')} label="Help" />
     </View>
   );
@@ -40,9 +33,15 @@ export default function BottomNav() {
 
 const styles = StyleSheet.create({
   nav: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+
     flexDirection: 'row',
     justifyContent: 'space-around',
     paddingVertical: 14,
+
     backgroundColor: 'white',
     borderTopWidth: 1,
     borderColor: '#eee',
